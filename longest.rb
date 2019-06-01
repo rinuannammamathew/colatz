@@ -1,9 +1,14 @@
-def long_seq(number)
-  long_seq = []
-  (1...n).each do |n|
-    until seq.last == 1
-        if n%2 == 0
-            lonq_seq.push(n/2)
+def long_collatz(number)
+    seq_num = []
+    until number == 1
+        if number%2 != 0
+             number = 3*number+1
+            seq_num.push(number)
         else
-            long_seq.push(3*n)
+            number = number/2
+            seq_num.push(number)
+        end
+    end
+    return seq_num
 end
+puts long_collatz(1000000)
