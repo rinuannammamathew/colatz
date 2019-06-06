@@ -11,7 +11,12 @@ def collaz(number)
   end
   return array_number
 end
-puts collaz(1000000)
+puts collaz(5)
+puts "----"
+puts collaz(30)
+puts "----"
+puts collaz(100)
+
 
 
    

@@ -1,4 +1,4 @@
-def long_collatz(number)
+def collatz(number)
     seq_num = []
     until number == 1
         if number%2 != 0
@@ -11,4 +11,19 @@ def long_collatz(number)
     end
     return seq_num
 end
-puts long_collatz(1000000)
+
+longestNumber = 1
+longestValue = 1
+
+(1...1000000).each do |num|
+    
+    collatzCount = collatz(num).count
+    if longestValue < collatzCount
+        longestNumber = num
+        longestValue = collatzCount
+    end
+end
+
+    puts ":"
+puts "Longest Number: "
+puts longestNumber 
